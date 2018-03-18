@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"<Unnamed>","l":"Atleta"},{"p":"<Unnamed>","l":"Club"},{"p":"<Unnamed>","l":"ClubAtletismoTest"},{"p":"<Unnamed>","l":"Deporte"},{"p":"<Unnamed>","l":"Entrenador"}]
