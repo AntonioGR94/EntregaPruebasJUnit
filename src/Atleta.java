@@ -14,7 +14,7 @@ public class Atleta {
     String nombre;
     String dni;
     Entrenador entrenador;
-    ArrayList<Deporte> deportes =new ArrayList<>();
+    Deporte deporte;
     GregorianCalendar fechaInicio;
     GregorianCalendar fechaFin;
 
@@ -26,11 +26,11 @@ public class Atleta {
      */
 
 
-    public Atleta(String dni,String nombre, Entrenador trainer, ArrayList<Deporte> sports){
+    public Atleta(String dni,String nombre, Entrenador trainer, Deporte sports){
         this.dni=dni;
         this.nombre=nombre;
         entrenador=trainer;
-        deportes=sports;
+        deporte=sports;
 
     }
 
@@ -42,8 +42,8 @@ public class Atleta {
         return dni;
     }
 
-    public ArrayList<Deporte> getDeportes() {
-        return deportes;
+    public Deporte getDeporte() {
+        return deporte;
     }
 
     public void setNombre(String nombre) {
@@ -79,27 +79,14 @@ public class Atleta {
      */
     public boolean practica(Deporte sport, Entrenador trainer){
         boolean loPractica=false;
-        if (deportes.contains(sport) && entrenador.equals(trainer)){
+        if (this.deporte==sport && entrenador.equals(trainer)){
             loPractica=true;
 
         }
         return loPractica;
     }
 
-    //
-    /**
-     * - Método que te devuelva otra atleta con el mismo entrenador y si no existe pues
-     *   que devuelva null.
-     * @return Atleta
-     */
-    public Atleta mismoEntrenador(){
-        for (Atleta a:entrenador.atletas){
-            if (!a.equals(this)){
-                return a;
-            }
-        }
-        return null;
-    }
+
 
 
     /**
